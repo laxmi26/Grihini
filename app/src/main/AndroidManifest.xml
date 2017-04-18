@@ -1,0 +1,93 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.grihini.grihini">
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WeatherActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".Shopping.ShoppingActivity"
+            android:label="Shopping"
+            android:theme="@style/AppCompat" />
+        <activity
+            android:name=".ExpensesActivity"
+            android:label="Expenses Categories"
+            android:theme="@style/AppCompat" />
+        <activity
+            android:name=".ExpensesTotal.Expenses_input"
+            android:label="Expenses Input"
+            android:theme="@style/AppCompat" />
+        <activity
+            android:name=".ExpensesTotal.Expenses_Total"
+            android:label="Expenses Total"
+            android:theme="@style/AppCompat" />
+
+        <activity
+            android:name=".Reminders.ReminderActivity"
+            android:label="Reminder"
+            android:theme="@style/App_Theme"/>
+
+        <activity
+            android:name=".Reminders.ReminderAddActivity"
+            android:label="@string/title_activity_add_reminder"/>
+
+        <activity
+            android:name=".Reminders.ReminderEditActivity"
+            android:label="@string/title_activity_edit_reminder"/>
+
+        <activity
+            android:name=".Reminders.LicencesActivity"
+            android:label="@string/title_activity_licenses"/>
+
+        <receiver android:name=".Reminders.AlarmReceiver"/>
+
+        <receiver
+            android:name=".Reminders.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".About"
+            android:label="About Us"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="Settings"></activity>
+
+
+    </application>
+
+</manifest>
